@@ -1,0 +1,94 @@
+<div class="dashboard-container">
+  
+  <div class="table-container">
+    <div class="table-header">
+      <h2>Liste des utilisateurs</h2>
+      <button class="btn-add" (click)="openModal()">
+        <i class="fas fa-plus"></i> + Ajouter
+      </button>
+    </div>
+
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>USER</th>
+          <th>POST</th>
+          <th>MAIL</th>
+          <th>DIRECTION</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of utilisateurs">
+          <td>{{ u.nom }}</td>
+          <td>{{ u.post }}</td>
+          <td>{{ u.mail }}</td>
+          <td>{{ u.direction }}</td>
+          <td class="actions">
+            <span class="badge badge-publie">Actif</span>
+          </td>
+        </tr>
+        
+        <tr *ngIf="utilisateurs.length === 0">
+          <td colspan="5" class="empty-message">
+            Aucun utilisateur trouvé
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="modal-overlay" *ngIf="displayModal">
+  <div class="modal-card">
+    <h3>Ajouter un nouvel utilisateur</h3>
+    
+    <form (ngSubmit)="enregistrer()">
+      <div class="form-group-container">
+        
+        <div class="input-field">
+          <input 
+            type="text" 
+            [(ngModel)]="newUser.nom" 
+            name="nom" 
+            placeholder="Nom de l'utilisateur" 
+            required>
+        </div>
+          
+        <div class="input-field">
+          <input 
+            type="text" 
+            [(ngModel)]="newUser.post" 
+            name="post" 
+            placeholder="Poste occupé" 
+            required>
+        </div>
+          
+        <div class="input-field">
+          <input 
+            type="email" 
+            [(ngModel)]="newUser.mail" 
+            name="mail" 
+            placeholder="Adresse e-mail" 
+            required>
+        </div>
+          
+        <div class="input-field">
+          <input 
+            type="text" 
+            [(ngModel)]="newUser.direction" 
+            name="direction" 
+            placeholder="Direction" 
+            required>
+        </div>
+
+      </div>
+      
+      <div class="modal-footer">
+        <button type="submit" class="btn-confirm">Confirmer</button>
+        <button type="button" class="btn-cancel" (click)="displayModal = false">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>

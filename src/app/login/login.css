@@ -1,0 +1,92 @@
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 180px; 
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-sizing: border-box; /* Évite que la carte elle-même ne s'élargisse mal */
+}
+
+h2 { color: #333; margin-bottom: 5px; }
+.subtitle { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+.input-group { text-align: left; margin-bottom: 20px; }
+label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+
+.input-wrapper { position: relative; }
+.input-wrapper i { position: absolute; left: 15px; top: 12px; color: #aaa; }
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    
+    /* LE CORRECTIF : Force les marges internes (padding) à rester à l'intérieur des 100% */
+    box-sizing: border-box; 
+}
+
+/* Optionnel : Changement de couleur de la bordure quand on clique sur l'input */
+.input-wrapper input:focus {
+    border-color: #B31B20;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #B31B20; /* Rouge ATB */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    /* LE CORRECTIF : Empêche également le bouton de dépasser */
+    box-sizing: border-box; 
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 20px;
+    color: #B31B20;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.error-box {
+    background-color: #fde8e8;
+    color: #B31B20;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #f8b4b4;
+}

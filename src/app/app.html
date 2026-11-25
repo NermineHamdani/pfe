@@ -1,0 +1,14 @@
+<div class="main-layout">
+  @if (isLoggedIn === 'true') {
+    <app-sidebar></app-sidebar>
+  }
+
+  <div class="main-content">
+      @if (isLoggedIn === 'true') {
+    <app-header></app-header>
+    }
+    <main class="page-container">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

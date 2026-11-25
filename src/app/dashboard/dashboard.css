@@ -1,0 +1,127 @@
+/* Structure de base */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+app-sidebar {
+  width: 250px;
+  min-width: 250px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f7f6;
+}
+
+.dashboard-content {
+  padding: 30px;
+}
+
+/* Cartes Rouges ATB */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #a51212;
+  color: white;
+  padding: 25px;
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-icon { font-size: 2rem; }
+.card-label { font-size: 1.1rem; font-weight: 500; }
+
+/* Tableau Blanc */
+.table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-table { width: 100%; border-collapse: collapse; }
+.custom-table th { 
+  text-align: left; padding: 15px; color: #888; font-size: 0.85rem; border-bottom: 1px solid #eee;
+}
+.custom-table td { padding: 18px 15px; border-bottom: 1px solid #f9f9f9; color: #444; }
+
+/* Badges de Statut */
+.badge { padding: 6px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+.badge-publie { background: #28a745; color: white; }
+.badge-attente { background: #fd7e14; color: white; }
+
+/* Boutons */
+.btn-add { background: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+.btn-icon { border: none; padding: 8px; border-radius: 4px; cursor: pointer; margin: 0 2px; }
+.edit { background: #e9ecef; color: #333; }
+.delete { background: #a51212; color: white; }
+
+/* 🔥 Nouveau style pour le bouton d'action "Voir l'œil" (Bleu discret) */
+.view { 
+  background: #e0f2fe; 
+  color: #0369a1; 
+}
+.view:hover {
+  background: #bae6fd;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-card {
+  background: white; padding: 30px; border-radius: 10px; width: 450px; display: flex; flex-direction: column; gap: 15px;
+}
+.form-group input, .form-group select { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+.modal-footer { display: flex; gap: 10px; justify-content: flex-end; }
+.btn-confirm { background: #a51212; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+.btn-cancel { background: #eee; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+
+/* ==========================================================================
+   🔥 AJOUTS ET MISES À JOUR POUR LE PANNEAU LATÉRAL DE DÉTAILS
+   ========================================================================== */
+.side-details-panel {
+  animation: slideIn 0.25s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Style de bloc de code style Console Dev Terminus */
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Effet au survol des boutons d'icônes génériques */
+.btn-icon:hover {
+  opacity: 0.85;
+}

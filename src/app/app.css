@@ -1,0 +1,45 @@
+/* Retire les marges par défaut autour de la page */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8; /* Fond gris clair global */
+}
+
+/* Flexbox pour mettre la sidebar et le contenu côte à côte */
+.app-layout {
+  display: flex;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+/* Le bloc de droite prend tout l'espace restant */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: flex; /* Aligne sidebar et contenu côte à côte */
+  height: 100vh;
+  width: 100%;
+}
+
+app-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f4f7f6;
+}
+
+.page-container {
+  padding: 20px;
+}

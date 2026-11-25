@@ -1,0 +1,21 @@
+<div class="sidebar-container">
+  <div class="logo-box">
+    <img src="atb.png" alt="ATB Logo" class="sidebar-logo">
+  </div>
+  
+  <nav class="nav-links">
+    <a routerLink="/dashboard" routerLinkActive="active" class="nav-item">
+      <i class="fas fa-home"></i> Dashboard
+    </a>
+    
+    <a routerLink="/utilisateurs" routerLinkActive="active" class="nav-item">
+      <i class="fas fa-user"></i> Utilisateur
+    </a>
+  </nav>
+
+  <div class="footer-sidebar">
+    <button (click)="logout()" class="nav-item logout">
+      <i class="fas fa-sign-out-alt"></i> Déconnexion
+    </button>
+  </div>
+</div>

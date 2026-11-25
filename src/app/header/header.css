@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Sépare le titre (gauche) du profil (droite) */
+  align-items: center; /* Centre verticalement */
+  padding: 10px 30px; /* Ajoute un peu d'espace */
+  background-color: white; /* Fond blanc si ce n'est pas déjà le cas */
+  border-bottom: 1px solid #eee; /* Petite ligne de séparation optionnelle */
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Style pour le nouveau conteneur du profil */
+.user-profile {
+  display: flex;
+  align-items: center; /* Aligne verticalement l'avatar et le texte */
+  gap: 15px; /* Espacement entre l'avatar et le texte */
+}
+
+/* Style pour l'image de l'avatar */
+.user-avatar {
+  width: 45px; /* Taille de l'avatar */
+  height: 45px; /* Même taille pour faire un cercle parfait */
+  border-radius: 50%; /* C'est ce qui rend l'image circulaire */
+  object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
+  border: 2px solid white; /* Petite bordure blanche */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Petite ombre portée */
+}
+
+.user-profile span {
+  font-size: 1rem;
+  color: #555;
+}

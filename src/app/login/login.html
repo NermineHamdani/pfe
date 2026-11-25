@@ -1,0 +1,38 @@
+<div class="login-page">
+    <div class="login-container">
+        <div class="logo-section">
+            <img src="logo-atb.png" alt="ATB Logo" class="logo">
+        </div>
+
+        <div class="login-card">
+            <h2>Connexion</h2>
+            <p class="subtitle">Accédez à votre espace bancaire en toute sécurité.</p>
+
+            <div *ngIf="errorMessage" class="error-box">
+                {{ errorMessage }}
+            </div>
+
+            <form (ngSubmit)="onLogin()">
+                <div class="input-group">
+                    <label>Nom d'utilisateur / Email</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="email" [(ngModel)]="credentials.email" placeholder="Entrez votre identifiant ou email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Mot de passe</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="motDePasse" [(ngModel)]="credentials.motDePasse" placeholder="Entrez votre mot de passe" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login">Se connecter</button>
+            </form>
+
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+        </div>
+    </div>
+</div>
